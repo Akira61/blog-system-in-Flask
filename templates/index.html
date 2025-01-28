@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %} 🏠Blogs {% endblock %}
+{% block body %}
+<body class="bg-light">
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Blogs</h1>
+        
+        <div class="pt-4">
+            {% if blogs %}
+                <div class="list-group">
+                    {% for blog in blogs %}
+                        <a href="/post/{{ blog.title }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center mb-3 shadow-sm">
+                            <div>
+                                <h4 class="mb-1 text-primary">{{ blog.title }}</h4>
+                                <!-- <p class="mb-0 text-muted small">Posted {{ blog.timestamp }}</p> -->
+                            </div>
+                            <div class="text-muted small">{{ blog.timestamp.strftime('%Y-%m-%d') }}</div>
+                        </a>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="alert alert-info text-center" role="alert">
+                    <p>No Posts Found 📭</p>
+                    Create <a href="/new">new post</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+{% endblock %}

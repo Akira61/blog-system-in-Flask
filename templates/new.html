@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} 🏠Home {% endblock %}
+{% block body %}
+<body>
+    <h1>Write a Blog</h1>
+    <form action="#" method="post" class="pt-5">
+        <div class="form-floating mb-3">
+            <input type="text" name="title" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Title</label>
+          </div>
+        <div class="form-floating">
+            <textarea class="form-control" name="post" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 300px"></textarea>
+            <label for="floatingTextarea2">Post..</label>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+</body>
+{% endblock %}

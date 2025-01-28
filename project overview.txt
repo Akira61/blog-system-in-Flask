@@ -1,0 +1,9 @@
+Simple Blog App
+Features:
+
+Users can create, read, update, and delete blog posts.
+A simple homepage listing all blog posts.
+Each post has a title, content, and timestamp.
+Database Tables:
+
+Posts (id, title, content, timestamp).
